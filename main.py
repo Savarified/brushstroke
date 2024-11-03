@@ -189,11 +189,11 @@ while run:
                 sys.exit()
             if event.key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_SHIFT:
                 pygame.image.save(canvas, SAVE_NAME)
-                
+                print(f'Saved as \'{SAVE_NAME}\'')
             if event.key == pygame.K_p:
                 print(clock.get_fps())
                 
-            if event.key == pygame.K_r: #reset canvas
+            if event.key == pygame.K_r and pygame.key.get_mods() & pygame.KMOD_SHIFT: #reset canvas
                 screen.fill(backgroundColor)
                 canvas.fill(backgroundColor)
 
